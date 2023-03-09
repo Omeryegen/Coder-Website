@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    box-sizing: 0;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --bg-yellow: yellow;
+    --bg-grey: #f0f1f3;
+    --bg-blue: #10518f;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--bg-grey);
+    font-family: 'Roboto', sans-serif;
+}
+/*Navbar*/
+#navbar {
+    background: var(--bg-blue);
+    margin-bottom: 4rem;
+}
+.navbar-content{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 70px;
+}
+
+.links a {
+    font-size: 1.2rem;
+    padding: .9rem;
+    color: #fff;
+
+}
+.links a:hover {
+    border-bottom: 3px solid coral;
+}
+
+.container {
+    max-width: 1450px;
+    margin: auto;
+}
+
+/*Header*/
+#header {
+    margin-bottom: 4rem;
+    background-color: #fff;
+  
+}
+.header-content {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.header-content img {
+    width: 90%;
+    height: 550px;
+    border-radius: 5px;
+}
+.header-content div {
+    height: 100%;
+    background-color: #fff;
+}
+.header-content div h1 {
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+.header-content div p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*Showcase Core*/
+.showcase-content {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: auto;
+    width: 97%;
+    display: grid;
+    position: relative;
+}
+.view-more {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.background {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    background: var(--bg-blue);
+    text-align: center;
+    z-index: -1;
+}
+.background h4 {
+    margin-top: 3rem;
+}
+.boxes {
+    margin: auto;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+ 
+   /* grid-template-columns: repeat(3, 1fr); */
+    /*grid-gap: 1rem;*/
+    width: 90%;
+    animation: opacity 3s;
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }to {
+        opacity: 1;
+    }
+}
+
+/*Boxes*/
+.box {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    border: solid #333 1px;
+    box-shadow: 8px 8px 6px -6px black;
+    width: 90%;
+    min-width: 90%;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 1rem;
+    
+}
+
+.lower-box {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    border-top: .5px solid black;
+    background: #fff;
+}
+.lower-box h3, .lower-box p{
+    padding: 1rem;
+}
+.lower-box a {
+    color: black;
+}
+
+
+.lower-box p {
+    grid-row: 3/ span 4;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logos div {
+    margin: 0 1rem;
+}
+
+/*Upperbox*/
+
+.upper-box {
+  cursor: pointer;
+  background-size: contain;
+  transition: all .5s;
+  overflow: hidden;
+}
+.upper-box img {
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+.upper-box:hover img {
+    transform: scale(1.5);
+}
+
+/*view-more*/
+.view-more a {
+    
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding: 1rem;
+}
+.view-more a .line {
+    position: absolute;
+    bottom: 3px;
+    width: 90%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: coral;
+    transition: .3s;
+    transform: scale(0);
+}
+.view-more a:hover:only-child div{
+    transform: scale(1);
+}
+
+
+@media  (max-width: 970px){
+    .boxes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media  (max-width: 670px){
+    .boxes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .sign-up{
+        display: none;
+    }
+    .navbar-content{
+        justify-content: center;
+    }
+    .header-content{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-bottom: 2rem;
+    }
+}

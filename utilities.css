@@ -1,0 +1,39 @@
+.header-white {
+    margin: 1rem;
+    color: #fff;
+}
+.sign-up {
+    font-size: 1.2rem;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(207, 99, 155, 0.8), rgba(206, 37, 125, 0.8));
+    box-shadow: 3px 3px 8px 3px black;
+}
+.sign-up:hover{
+    color: rgba(206, 37, 125, 0.8);
+    background: #fff;
+}
+.yellow {
+    color: rgb(234, 234, 22);
+}
+
+.blue {
+    color: rgb(26, 109, 193);
+}
+
+.coral {
+    color: coral;
+}
+
+.blue {
+    color: rgb(26, 99, 184);
+}
+
+i {
+    font-size: 2.5rem;
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
